@@ -21,22 +21,22 @@ public class GradeSort {
         System.out.println();
         // calculate average grade
         int sum = 0;
-        for (int i = 0; i < grades.length; i++) {
-            sum += grades[i];
+        for (int grade : grades) {
+            sum += grade;
         }
         int average = sum / grades.length;
         // count how many grades are the same, above, or below the average
         int same = 0;
         int above = 0;
         int below = 0;
-        for (int i = 0; i < grades.length; i++) {
-            if (grades[i] == average) {
+        for (int grade : grades) {
+            if (grade == average) {
                 same++;
             }
-            if (grades[i] > average) {
+            if (grade > average) {
                 above++;
             }
-            if (grades[i] < average) {
+            if (grade < average) {
                 below++;
             }
         }
